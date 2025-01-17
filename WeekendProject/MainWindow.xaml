@@ -1,0 +1,224 @@
+﻿<Window x:Class="WeekendProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeekendProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background = "White">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="110"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height ="100"/>
+            <RowDefinition Height ="*"/>
+            <RowDefinition Height ="70"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="3">
+            <Button
+                Content ="Score: 0"
+                Background=" White"
+                Name ="Score"/>
+        </Grid>
+        <Grid Grid.Column="3" Grid.Row="2">
+            <Button
+                Content ="Best Score: 0"
+                Background=" White"
+                Name ="TotalScore"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column=" 1" Grid.ColumnSpan="2" Margin="0,264,0,0" Grid.RowSpan="2">
+            <StackPanel Orientation=" Horizontal"
+                        HorizontalAlignment = "Center">
+                <Image
+                    Height=" 80"
+                    Width=" 80"
+                    Name ="Heart1"
+                    Source ="Images/Heart.png">
+                </Image>
+                <Image
+                    Height=" 80"
+                    Width=" 80" 
+                    Name ="Heart2"
+                    Source ="Images/Heart.png">
+                </Image>
+                <Image
+                    Height=" 80"
+                    Width=" 80"
+                    Name ="Heart3"
+                    Source ="Images/Heart.png">
+                </Image>
+                <Image
+                    Height=" 80"
+                    Width=" 80"
+                    Name ="Heart4"
+                    Source ="Images/Heart.png">
+                </Image>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row ="1">
+            <StackPanel>
+                <Button
+                    Height=" 30"
+                    Width="60"
+                    Click="Start"
+                    Margin="0, 20, 0, 40"
+                    Content="Start"/>
+                <Button
+                    Height=" 30"
+                    Width="60"
+                    Click="Stop"
+                    Content=" Stop"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Column=" 1" Grid.ColumnSpan="2">
+            <StackPanel Orientation = "Horizontal"
+                    VerticalAlignment = "Center"
+                    HorizontalAlignment = "Center">
+                <Button
+                    Height=" 30"
+                    Width=" 100"
+                    Margin="40, 0, 40, 0"
+                    Content="Easy"
+                    Background=" Yellow"
+                    Click="ChoosingComplexcity"
+                    Name="easyButton"/>
+                <Button
+                    Height=" 30"
+                    Width=" 100"
+                    Margin="0, 0, 40, 0"
+                    Content=" Normal"
+                    Click="ChoosingComplexcity"
+                    Name ="normalButton"/>
+                <Button
+                    Height=" 30"
+                    Width=" 100"
+                    Margin="0, 0, 40, 0"
+                    Content="Deadly"
+                    Click="ChoosingComplexcity"
+                    Name ="deadlyButton"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row=" 1" Grid.Column=" 1" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height ="*"/>
+                <RowDefinition Height ="*"/>
+                <RowDefinition Height ="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <StackPanel Orientation="Horizontal"
+                            VerticalAlignment = "Top">
+                    <Button
+                        Height="70"
+                        Width="70"
+                        Margin="75, 0, 75, 0"
+                        Name = "A1"
+                        Background="LightGray"
+                        Click="PotentialSquirrelClick"
+                     />
+                    <Button
+                        Height="70"
+                        Width="70"
+                        Margin="0, 0, 75, 0"
+                        Name = "B1"
+                        Background="LightGray"
+                        Click="PotentialSquirrelClick"
+                    />
+                    <Button
+                        Height="70"
+                        Width="70"
+                        Margin="0, 0, 75, 0"
+                        Name = "C1"
+                        Background="LightGray"
+                        Click="PotentialSquirrelClick"
+                    />
+                    <Button
+                        Height="70"
+                        Width="70"
+                        Margin="0, 0, 75, 0"
+                        Name = "D1"
+                        Background="LightGray"
+                        Click="PotentialSquirrelClick"
+                    />
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1">
+                <StackPanel Orientation="Horizontal"
+                            VerticalAlignment = "Center">
+                    <Button
+                        Height="70"
+                        Width="70"
+                        Margin="75, 0, 75, 0"
+                        Name = "A2"
+                        Background="LightGray"
+                        Click="PotentialSquirrelClick"
+
+                    />
+                    <Button
+                        Height="70"
+                        Width="70"
+                        Margin="0, 0, 75, 0"
+                        Name = "B2"
+                        Background="LightGray"
+                        Click="PotentialSquirrelClick"
+                    />
+                    <Button
+                        Height="70"
+                        Width="70"
+                        Margin="0, 0, 75, 0"
+                        Name = "C2"
+                        Background="LightGray"
+                        Click="PotentialSquirrelClick"
+                    />
+                    <Button
+                        Height="70"
+                        Width="70"
+                        Margin="0, 0, 75, 0"
+                        Name = "D2"
+                        Background="LightGray"
+                        Click="PotentialSquirrelClick"
+                    />
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="2">
+                <StackPanel Orientation="Horizontal"
+                            VerticalAlignment = "Bottom">
+                    <Button
+                        Height="70"
+                        Width="70"
+                        Margin="75, 0, 75, 0"
+                        Name = "A3"
+                        Background="LightGray"
+                        Click="PotentialSquirrelClick"
+                    />
+                    <Button
+                        Height="70"
+                        Width="70"
+                        Margin="0, 0, 75, 0"
+                        Name = "B3"
+                        Background="LightGray"
+                        Click="PotentialSquirrelClick"
+                    />
+                    <Button
+                        Height="70"
+                        Width="70"
+                        Margin="0, 0, 75, 0"
+                        Name = "C3"
+                        Background="LightGray"
+                        Click="PotentialSquirrelClick"
+                    />
+                    <Button
+                        Height="70"
+                        Width="70"
+                        Margin="0, 0, 75, 0"
+                        Name = "D3"
+                        Background="LightGray"
+                        Click="PotentialSquirrelClick"
+                    />
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
